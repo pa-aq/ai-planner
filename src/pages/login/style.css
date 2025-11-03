@@ -1,0 +1,260 @@
+/* 登录页面容器 - AI旅行规划师主题 */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #3498db 0%, #8e44ad 100%);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 登录卡片 */
+.login-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  padding: 40px;
+  width: 100%;
+  max-width: 420px;
+  position: relative;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 登录标题 */
+.login-title {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.login-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #8e44ad);
+  border-radius: 2px;
+}
+
+/* AI旅行规划师Logo样式 */
+.login-logo {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 48px;
+  color: #3498db;
+}
+
+/* 表单组 */
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: 500;
+}
+
+/* 输入框 */
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.form-input.error {
+  border-color: #ff4757;
+}
+
+.error-message {
+  color: #ff4757;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* 验证码输入组 */
+.code-input-group {
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.code-input {
+  flex: 1;
+}
+
+/* 发送验证码按钮 */
+.send-code-btn {
+  padding: 12px 20px;
+  background: #4b9fd6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  min-width: 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+.send-code-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.send-code-btn:hover:not(:disabled)::before {
+  width: 300px;
+  height: 300px;
+}
+
+.send-code-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(52, 152, 219, 0.3);
+}
+
+.send-code-btn.disabled,
+.send-code-btn:disabled {
+  background: #a0aec0;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* 登录按钮 */
+.login-btn {
+  width: 100%;
+  padding: 14px;
+  background: #4b9fd6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.login-btn:hover:not(:disabled)::before {
+  width: 400px;
+  height: 400px;
+}
+
+.login-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(142, 68, 173, 0.3);
+}
+
+.login-btn:disabled {
+  background: #a0aec0;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* 登录提示 */
+.login-tips {
+  text-align: center;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(224, 224, 224, 0.5);
+}
+
+.login-tips p {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* 旅行主题装饰元素 */
+.travel-decoration {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 30px 24px;
+  }
+  
+  .login-title {
+    font-size: 24px;
+  }
+  
+  .login-logo {
+    font-size: 40px;
+  }
+  
+  .form-input {
+    padding: 10px 14px;
+    font-size: 15px;
+  }
+  
+  .code-input-group {
+    flex-direction: column;
+  }
+  
+  .send-code-btn {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .travel-decoration {
+    display: none;
+  }
+}

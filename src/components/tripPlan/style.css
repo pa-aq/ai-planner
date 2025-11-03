@@ -1,0 +1,297 @@
+.planner-container{
+    padding:10px;
+}
+/* .ant-tabs-nav-wrap{
+    padding-left:15px;
+} */
+
+.ant-tabs-nav{
+    margin-bottom:0 !important;
+}
+.main-content {
+  min-height: 600px;
+}
+.itinerary-map{
+    padding:20px 15px;
+    background-color: white;
+}
+.itinerary-select{
+    margin-bottom:15px;
+}
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  text-align: center;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.empty-state h2 {
+  color: #1890ff;
+  margin-bottom: 10px;
+}
+
+.empty-state p {
+  color: #8c8c8c;
+  max-width: 500px;
+}
+/* 行程详情 */
+.itinerary-details {
+  padding: 20px;
+  background-color: white;
+}
+
+.itinerary-details h2 {
+  color: #1890ff;
+  margin-bottom: 10px;
+}
+
+.itinerary-meta {
+  color: #8c8c8c;
+  margin-bottom: 20px;
+}
+
+.day-card {
+  margin-bottom: 20px;
+}
+
+.day-card h3 {
+  color: #1890ff;
+  margin-bottom: 15px;
+}
+.day-theme{
+  margin-left:30px;
+  color:black;
+  font-weight: normal;
+  font-size:14px;
+}
+
+.activity-item {
+  border-left: 2px solid #f0f0f0;
+  padding-left: 20px !important;
+  position: relative;
+}
+
+.activity-item .ant-list-item-icon {
+  position: absolute;
+  left: -12px;
+  top: 12px;
+}
+
+.activity-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.activity-time {
+  font-weight: 600;
+  color: #1890ff;
+  min-width: 60px;
+}
+
+.activity-name {
+  font-weight: 500;
+}
+/* 预算管理 */
+.budget-voice-button {
+  margin-left: 10px;
+  transition: all 0.3s ease;
+}
+
+.budget-voice-button.listening {
+  background-color: #ff4d4f;
+  color: white;
+  animation: pulse 1.5s infinite;
+}
+
+.budget-voice-button.listening:hover {
+  background-color: #ff7875;
+  color: white;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 77, 79, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 77, 79, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 77, 79, 0);
+  }
+}
+.budget-management {
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.budget-summary h3,
+.budget-categories h3,
+.expense-input h3 {
+  color: #1890ff;
+  margin-bottom: 15px;
+}
+
+.budget-totals {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.budget-total-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.budget-amount {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.budget-amount.spent {
+  color: #fa8c16;
+}
+
+.budget-amount.remaining {
+  color: #52c41a;
+}
+
+.budget-progress-large {
+  width: 100%;
+  height: 15px;
+  background-color: #f0f2f5;
+  border-radius: 7.5px;
+  overflow: hidden;
+}
+
+.budget-bar-large {
+  height: 100%;
+  background-color: #52c41a;
+  transition: width 0.3s ease;
+}
+
+.category-item {
+  margin-bottom: 20px;
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.category-progress {
+  width: 100%;
+  height: 8px;
+  background-color: #f0f2f5;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.category-bar {
+  height: 100%;
+  background-color: #1890ff;
+  transition: width 0.3s ease;
+}
+
+.expense-input-wrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+}
+.budget-voice-button{
+    margin-left:25px;
+}
+.itinerary-overview {
+  width: 350px;
+  flex-shrink: 0;
+}
+
+.itinerary-overview h3 {
+  color: #1890ff;
+  margin-bottom: 15px;
+}
+
+.budget-info {
+  margin-top: 20px;
+}
+
+.budget-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.budget-progress {
+  width: 100%;
+  height: 10px;
+  background-color: #f0f2f5;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.budget-bar {
+  height: 100%;
+  background-color: #52c41a;
+  transition: width 0.3s ease;
+}
+
+/* 行程详情 */
+.itinerary-details {
+  padding: 20px;
+}
+
+.itinerary-details h2 {
+  color: #1890ff;
+  margin-bottom: 10px;
+}
+
+.itinerary-meta {
+  color: #8c8c8c;
+  margin-bottom: 20px;
+}
+
+.day-card {
+  margin-bottom: 20px;
+}
+
+.day-card h3 {
+  color: #1890ff;
+  margin-bottom: 15px;
+}
+
+.activity-item {
+  border-left: 2px solid #f0f0f0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.activity-item .ant-list-item-icon {
+  position: absolute;
+  left: -12px;
+  top: 12px;
+}
+
+.activity-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.activity-time {
+  font-weight: 600;
+  color: #1890ff;
+  min-width: 60px;
+}
