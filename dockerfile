@@ -7,8 +7,10 @@ WORKDIR /app
 # 复制 package.json 和 package-lock.json
 COPY package.json package-lock.json ./
 
-# 如果有 package-lock.json 使用 ci，否则使用 install
-RUN if [ -f package-lock.json ]; then npm ci; else npm install; fi
+# 清除缓存并重新安装
+RUN npm cache clean --force
+RUN rm -rf node_modules
+RUN npm install
 
 # 复制源代码
 COPY . .
