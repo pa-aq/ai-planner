@@ -9,6 +9,8 @@ COPY package*.json ./
 
 RUN npm install
 
+RUN npm install axios
+
 # 复制源代码
 COPY . .
 
