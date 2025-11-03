@@ -22,8 +22,7 @@ FROM nginx:alpine
 # 复制构建结果到 nginx
 COPY --from=build /app/build /usr/share/nginx/html
 
-# 复制 nginx 配置（处理 SPA 路由）
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+
 
 # 暴露端口
 EXPOSE 3000
