@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # 安装依赖
-RUN npm ci --only=production
+RUN npm install
 
 # 复制源代码
 COPY . .
@@ -22,8 +22,8 @@ FROM nginx:alpine
 # 复制构建结果到 nginx
 COPY --from=build /app/build /usr/share/nginx/html
 
-# 复制自定义 nginx 配置（可选）
-# COPY nginx.conf /etc/nginx/nginx.conf
+# 复制 nginx 配置（处理 SPA 路由）
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # 暴露端口
 EXPOSE 3000
