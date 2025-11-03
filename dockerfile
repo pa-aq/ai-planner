@@ -5,13 +5,16 @@ FROM node:18-alpine AS build
 WORKDIR /app
 
 # 复制 package.json 和 package-lock.json
-COPY package*.json ./
+COPY package.json package-lock.json ./
 
-# 安装依赖
-RUN npm install
+# 如果有 package-lock.json 使用 ci，否则使用 install
+RUN if [ -f package-lock.json ]; then npm ci; else npm install; fi
 
 # 复制源代码
 COPY . .
+
+# 验证 axios 是否安装
+RUN npm list axios
 
 # 构建应用
 RUN npm run build
