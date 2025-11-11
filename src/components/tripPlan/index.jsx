@@ -496,7 +496,7 @@ const TripPlan = ({pId}) => {
                         </Form>
                         
                     </div>
-                    <p>当前语音输入: {transcript}</p>
+                    <p>当前语音输入: {comCurListening==='tripPlan'?transcript:''}</p>
                     </Card>
                 </div>
                 </TabPane>
