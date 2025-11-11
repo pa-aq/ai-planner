@@ -64,11 +64,6 @@ const TripPlan = ({pId}) => {
     resetTranscript,
     browserSupportsSpeechRecognition
   } = useSpeechRecognition();
-  useEffect(()=>{
-    if (!browserSupportsSpeechRecognition) {
-        return <span>Browser doesn't support speech recognition.</span>;
-    }
-  },[])
 
   useEffect(()=>{
     if(transcript&&comCurListening==='tripPlan'){
@@ -301,7 +296,9 @@ const TripPlan = ({pId}) => {
     }
     
   };
-  // 重新获取预算
+ if (!browserSupportsSpeechRecognition) {
+        return <span>Browser doesn't support speech recognition.</span>;
+    }
 
     return (
       planDetail &&
